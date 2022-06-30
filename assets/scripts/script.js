@@ -45,9 +45,10 @@ function textBoxElement(id, value) {
 }
 
 function loadSavedRestaurants() {
-    console.log(getRestaurantsArray.length);
-    for (let i = 0; i < getRestaurantsArray.length; i++) {
-        textBoxElement(i, getRestaurantsArray[i].restaurant);
+    if (getRestaurantsArray) {
+        for (let i = 0; i < getRestaurantsArray.length; i++) {
+            textBoxElement(i, getRestaurantsArray[i].restaurant);
+        }
     }
 }
 
@@ -84,7 +85,6 @@ Button Function
 */
 function add() {
     textBoxElement(getRestaurantsArray.length, "");
-    console.log(getRestaurantsArray.length);
     let id = getRestaurantsArray[getRestaurantsArray.length - 1].id + 1;
     getRestaurantsArray.push({ "id": id, "restaurant": "" });
     localStorage.setItem("Restaurants", JSON.stringify(getRestaurantsArray));
