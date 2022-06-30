@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     row-gap: 20px;
-    padding: 112px 112px;
+    padding: 112px 112px 20px;
+    width: 100%;
 }
 
 #result {
@@ -26,6 +27,13 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 20px;
+    width: 100%;
+}
+
+#divOfRestaurantOutSide {
+    padding: 0px 112px;
+    height: 65vh;
+    overflow: scroll;
     width: 100%;
 }
 
@@ -51,5 +59,9 @@ Mobile version style
 @media only screen and (max-width: 768px) {
     #bigDiv {
         padding: 20px 20px;
+    }
+
+    #divOfRestaurantOutSide {
+        padding: 0px 20px;
     }
 }
