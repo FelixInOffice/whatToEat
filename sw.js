@@ -1,5 +1,5 @@
 // Cache name
-const cacheName = 'v1.5';
+const cacheName = 'v0.1';
 
 // install cache
 self.addEventListener('install', e => {
@@ -11,6 +11,7 @@ self.addEventListener('install', e => {
                 "./manifest.json",
                 "./assets/scripts/script.js",
                 "./assets/styles/style.css",
+                "./assets/styles/bootstrap.min.css",
                 "./assets/images/maskable_icon.png",
                 "./assets/images/icon.png",
                 "./assets/images/icon-72x72.png",
