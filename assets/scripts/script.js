@@ -7,6 +7,7 @@ function setDefault() {
     if (!localStorage.getItem("Restaurants")) {
         let restaurantArray = [{ "id": 0, "restaurant": "" }];
         localStorage.setItem("Restaurants", JSON.stringify(restaurantArray));
+        location.reload();
     }
 }
 
@@ -84,10 +85,12 @@ Button Function
 
 */
 function add() {
-    textBoxElement(getRestaurantsArray.length, "");
-    let id = getRestaurantsArray[getRestaurantsArray.length - 1].id + 1;
-    getRestaurantsArray.push({ "id": id, "restaurant": "" });
-    localStorage.setItem("Restaurants", JSON.stringify(getRestaurantsArray));
+    if (getRestaurantsArray) {
+        textBoxElement(getRestaurantsArray.length, "");
+        let id = getRestaurantsArray[getRestaurantsArray.length - 1].id + 1;
+        getRestaurantsArray.push({ "id": id, "restaurant": "" });
+        localStorage.setItem("Restaurants", JSON.stringify(getRestaurantsArray));
+    }
 }
 
 function del(button) {
