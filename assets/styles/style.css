@@ -33,7 +33,7 @@
 #divOfRestaurantOutSide {
     padding: 0px 112px;
     height: 65vh;
-    overflow: scroll;
+    overflow-y: scroll;
     width: 100%;
 }
 
